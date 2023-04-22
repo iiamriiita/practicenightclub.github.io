@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="shortcut icon" type="image/png" href="./img/logo.jpg">
+
+  <meta charset="UTF-8">
+  <title>studio9</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+
+<style>/* 修改 header 的背景顏色為黑色 */
+    html {
+    scroll-behavior: smooth;
+}
+.navbar {
+  background-color: #000;
+}
+
+/* 修改背景的顏色為黑色 */
+.carousel-item {
+  background-color: #000;
+    align-items: center;        
+}
+    
+    
+.content2{
+        display: flex;
+    flex-wrap: wrap;
+
+    }
+    
+    .image-column {
+      display: inline-block;
+       flex-basis: 50%;  
+       
+        
+    
+    }
+   
+  @media screen and (max-width: 720px) {
+    .image-column {
+      flex-basis: 100%; /* 在螢幕小於 480px 時，每列只顯示 1 個 column */
+    }
+  }
+    .content2 div{
+        padding: 2%
+    }
+    
+    
+    
+    </style>
+    
+<script>
+    window.onload = function() {
+  var loading = document.getElementById("loading");
+  loading.style.display = "none";
+}</script>
+
+<body>
+  <!-- loading  -->
+<div id="loading">
+    <div class="loading-animation"></div>
+  </div>
+    
+  <header class="navbar navbar-expand-lg navbar-dark ">
+   
+    <a class="navbar-brand" href="./index.html">
+    <img src="./img/logo.jpg" alt="My Website Logo" width="30" height="30" class="d-inline-block align-top">
+    studio9
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./act.html">&nbsp&nbsp近期活動&nbsp&nbsp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">&nbsp&nbsp關於studio9&nbsp&nbsp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">&nbsp&nbsp聯絡我們&nbsp&nbsp&nbsp&nbsp</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+ 
+  
+  
+     
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  
+  
+  
+   
+    
+	
+  <div class="content" id="about">
+     
+
+      <div class="content2">
+      
+  <div class="image-column">
+      <img src="./img/a5.png" alt="Image 2">
+  </div>
+   
+  <div class="image-column">
+     <h1 >SUNDAY GROOVE</h1><br>
+      <h3><button1 id="play-button" onclick="toggleSound()" >&nbsp;▶&nbsp;Play&nbsp&nbsp;</button1><h3><br></h3>
+      
+     
+  <audio id="click-sound">
+    <source src="./music/m2.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    var sound = document.getElementById("click-sound");
+    var button1 = document.getElementById("play-button");
+    var isPlaying = false;
+    function toggleSound() {
+      if (isPlaying) {
+        sound.pause();
+        button1.innerHTML = "&nbsp;▶&nbsp;Play&nbsp&nbsp;";
+        button1.classList.remove("playing");
+      } else {
+        sound.currentTime = 0;
+        sound.play();
+        button1.innerHTML = "&nbsp;ıllılı.ııllılı.ı&nbsp;";
+        button1.classList.add("playing");
+      }
+      isPlaying = !isPlaying;
+    }
+  </script></h3>
+       
+     <h3>Oct&nbsp;9th&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23PM-3AM</h3>
+     <h5>Line up<br>_____________________________</h5><h5>Cissa
+&nbsp;/&nbsp;The cook
+&nbsp;/&nbsp;Miyu Chen</h5><br><br>
+
+
+
+    
+  </div>
+    <div class="image-column">
+     
+  </div>
+    <div class="image-column">
+      <p style="color: aliceblue">𝗦𝘁𝘂𝗱𝗶𝗼 𝟵 將首次在周日的夜晚開啟大門~陪你一起慶祝三天連假的到來！讓漫長美好的周末之夜隨著音符甜蜜升溫，一起點亮週日的夜空。
+
+</p> 
+   <p style="color: aliceblue">
+A long holiday weekend is coming up, and Studio 9 will be opening its doors for a Sunday night full of grooves. Let Studio 9 bring the perfect tunes to sweeten up your long weekend.
+
+  </div>
+   
+   
+    <div class="image-column">
+ 
+  </div>
+    
+    
+    <div class="image-column">
+      <a  href="https://www.instagram.com/studio9tw/"><input type="button" value="私訊instagram預定票券→" name="按鈕名稱" style="width:240px;height:50px;"></a>
+  </div>
+    
+    
+    
+     </div>  
+  </div>
+   
+      
+   <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>聯絡我們</h4>
+        <p>地址：<a href="https://goo.gl/maps/Q72Q8bWaqJhDeffw6">9F, No. 116號漢中街萬華區台北市108</a><br>
+        電話：(02) 123-4567<br>
+            facebook：<a href="https://www.facebook.com/studio9tw">studio9</a>
+            <br>instagram:<a href="https://www.instagram.com/studio9tw/">@studio9tw</a></p>
+          </div>
+      <div class="col-md-4">
+        <h4>快速連結</h4>
+        <ul>
+          <li><a href="#">近期活動</a></li>
+          <li><a href="./about.html">關於studio9</a></li>
+         
+           <li><a href="./index.html">首頁</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>訂閱我們</h4>
+        <form action="#" method="post">
+          <input type="email" placeholder="輸入您的Email">
+          <button type="submit" style="background-color:black">訂閱</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p class="text-center">© 課堂作業練習非商用&nbsp&nbsp Apr.2023</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

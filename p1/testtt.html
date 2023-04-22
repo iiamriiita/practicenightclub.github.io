@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Sound</title>
+  <style>
+    button {
+      background-color: #2196f3;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+    }
+    button:hover {
+      background-color: #0c7cd5;
+    }
+    button.playing {
+      background-color: #4caf50;
+    }
+    button.playing:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <button id="play-button" onclick="toggleSound()">Play</button>
+  <audio id="click-sound">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    var sound = document.getElementById("click-sound");
+    var button = document.getElementById("play-button");
+    var isPlaying = false;
+    function toggleSound() {
+      if (isPlaying) {
+        sound.pause();
+        button.innerHTML = "Play";
+        button.classList.remove("playing");
+      } else {
+        sound.currentTime = 0;
+        sound.play();
+        button.innerHTML = "Pause";
+        button.classList.add("playing");
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
+</body>
+</html>
